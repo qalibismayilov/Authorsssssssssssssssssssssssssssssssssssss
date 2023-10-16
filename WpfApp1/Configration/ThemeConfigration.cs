@@ -5,15 +5,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WpfApp1.Model;
 using WpfApp1.Models;
 
-namespace WpfApp1.Configration
+namespace WpfApp1.Congiration
 {
-    public class ThemeConfigration : IEntityTypeConfiguration<Theme>
+    public class ThemesCongiration : IEntityTypeConfiguration<Theme>
     {
         public void Configure(EntityTypeBuilder<Theme> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(b => b.Id);
+
+            builder.Property(b => b.Name)
+                .IsRequired()
+                .HasMaxLength(50);
         }
     }
 }

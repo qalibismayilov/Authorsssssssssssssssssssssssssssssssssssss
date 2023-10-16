@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WpfApp1.Models
 {
-    public class Department:BaseEntity
+    public class Teacher:BaseEntity
     {
         public  string FirstName{ get; set; }
         public  string LastName{ get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WpfApp1.Models
 {
-    internal class Departmen:BaseEntity
+    public class Departmen:BaseEntity
     {
         public string Name { get; set; }    
     }

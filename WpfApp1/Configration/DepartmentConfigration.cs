@@ -1,19 +1,19 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using WpfApp1.Models;
 
-namespace WpfApp1.Configration
+namespace WpfApp1.Congiration
 {
-    public class DepartmentConfigration : IEntityTypeConfiguration<Department>
+    public class DepartmenCongiration : IEntityTypeConfiguration<Departmen>
     {
-        public void Configure(EntityTypeBuilder<Department> builder)
+        public void Configure(EntityTypeBuilder<Departmen> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(a => a.Id);
+
+            builder.Property(a => a.Name)
+                .IsRequired()
+                .HasMaxLength(50);
+
         }
     }
 }
